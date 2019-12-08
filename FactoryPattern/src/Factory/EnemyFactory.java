@@ -16,8 +16,8 @@ public class EnemyFactory {
 	
 	public Enemy getInstance() {
 		Enemy obj = null;
-		System.out.println("Enter 1 for Robot, 2 for Alien, 3 for Human");
-		int choice = scan.nextInt();
+		System.out.print("Enter 1 for Robot, 2 for Alien, 3 for Human: ");
+		int choice = Integer.parseInt(scan.nextLine());
 		if(choice>=1 && choice<=3) {
 			String name;
 			int maxAttackDamage;
@@ -26,7 +26,7 @@ public class EnemyFactory {
 			System.out.print("Give the enemy a name: ");
 			name = scan.nextLine();
 			System.out.print("Give the enemy the max damage that it can inflict upon others: ");
-			maxAttackDamage = scan.nextInt();
+			maxAttackDamage = Integer.parseInt(scan.nextLine());
 			System.out.print("Give the enemy a special attack name: ");
 			specialAttack = scan.nextLine();
 			
