@@ -20,6 +20,6 @@ public class Plant {
 	}
 	
 	public void releaseToxins() {
-		System.out.println(name+ " performed allelopaty and killed other plants in the area");
+		System.out.println(name+ " performed allelopathy and killed other plants in the area");
 	}
 }
