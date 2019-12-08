@@ -6,11 +6,15 @@ import Interface.EnemyAction;
 
 public abstract class Enemy implements EnemyAction {
 	private String specialAttack;
-	private double attackDamage;
+	private int attackDamage;
 	private String name;
 	private Random rand;
 
-	public Enemy(String specialAttack, double attackDamage, String name) {
+	public Enemy() {
+		this("Shank", 10, "Sam");
+	}
+	
+	public Enemy(String specialAttack, int attackDamage, String name) {
 		super();
 		this.specialAttack = specialAttack;
 		this.attackDamage = attackDamage;
@@ -30,7 +34,7 @@ public abstract class Enemy implements EnemyAction {
 		return attackDamage;
 	}
 
-	public void setAttackDamage(double attackDamage) {
+	public void setAttackDamage(int attackDamage) {
 		this.attackDamage = attackDamage;
 	}
 
@@ -42,9 +46,13 @@ public abstract class Enemy implements EnemyAction {
 		this.name = name;
 	}
 
+	public int getRandomDamage() {
+		return rand.nextInt(attackDamage+1);
+	}
+	
 	@Override
 	public String toString() {
-		return "Enemy with name: " + this.name +" does "+ this.attackDamage+" damage using the special attack called "+ specialAttack + ".";
+		return "Enemy with name: " + this.name +" does "+ this.attackDamage+" max damage using the special attack called "+ specialAttack + ".";
 	}
 	
 	
