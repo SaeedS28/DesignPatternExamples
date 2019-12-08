@@ -32,4 +32,14 @@ public class Human implements Activities {
 	public void sleep() {
 		System.out.println(name+ " slept for " +(rand.nextInt(10)+1) + " hours");
 	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	
 }
