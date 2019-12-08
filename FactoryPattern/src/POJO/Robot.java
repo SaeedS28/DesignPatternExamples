@@ -8,20 +8,17 @@ public class Robot extends Enemy {
 
 	@Override
 	public void attack() {
-		// TODO Auto-generated method stub
-
+		System.out.println(this.getName() + " used " + this.getSpecialAttack()+ " on its target and caused " + this.getRandomDamage() + " damage");
 	}
 
 	@Override
 	public void heal() {
-		// TODO Auto-generated method stub
-
+		System.out.println(this.getName() + " used a charging port to fully heal itself");		
 	}
 
 	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-
+	public void dodge() {
+		System.out.println(this.getName() + " used its treads to roll away from certain doom");			
 	}
 
 }

@@ -10,10 +10,6 @@ public abstract class Enemy implements EnemyAction {
 	private String name;
 	private Random rand;
 
-	public Enemy() {
-		this("Shank", 10, "Sam");
-	}
-	
 	public Enemy(String specialAttack, int attackDamage, String name) {
 		super();
 		this.specialAttack = specialAttack;

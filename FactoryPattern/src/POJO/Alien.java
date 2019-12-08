@@ -8,20 +8,16 @@ public class Alien extends Enemy {
 
 	@Override
 	public void attack() {
-		// TODO Auto-generated method stub
-
+		System.out.println(this.getName() + " used " + this.getSpecialAttack()+ " at the enemy and caused " + this.getRandomDamage() + " damage");
 	}
 
 	@Override
 	public void heal() {
-		// TODO Auto-generated method stub
-
+		System.out.println(this.getName() + " ate another alien to fully heal itself");		
 	}
 
 	@Override
-	public void move() {
-		// TODO Auto-generated method stub
-
+	public void dodge() {
+		System.out.println(super.getName() + " used its tentacles to slither away from certain doom");			
 	}
-
 }
