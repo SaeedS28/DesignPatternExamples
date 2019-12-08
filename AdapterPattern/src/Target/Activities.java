@@ -7,7 +7,7 @@ package Target;
  * @author Saad
  *
  */
-public interface Actvities {
+public interface Activities {
 	void eat();
 	void work();
 	void kill();
