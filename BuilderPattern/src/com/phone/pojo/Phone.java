@@ -1,14 +1,14 @@
 package com.phone.pojo;
 
-public class Phone {
+import com.phone.interfaces.PhonePlan;
+
+public class Phone implements PhonePlan {
 	
 	private String OS;
 	private int RAM;
 	private String processor;
 	private double screenSize;
 	private int battery;
-	
-	private Phone() {}
 
 	public String getOS() {
 		return OS;
@@ -54,54 +54,5 @@ public class Phone {
 	public String toString() {
 		return "Phone [OS=" + OS + ", RAM=" + RAM + ", processor=" + processor + ", screenSize=" + screenSize
 				+ ", battery=" + battery + "]";
-	}
-	
-	public static class Builder {
-		
-		private String OS;
-		private int RAM;
-		private String processor;
-		private double screenSize;
-		private int battery;
-		
-		public Builder() {}
-		
-		public Builder os(String OS) {
-			this.OS = OS;
-			return this;
-		}
-		
-		public Builder ram(int ram) {
-			this.RAM = ram;
-			return this;
-		}
-		
-		public Builder processor(String processor) {
-			this.processor = processor;
-			return this;
-		}
-		
-		public Builder screenSize(double screenSize) {
-			this.screenSize = screenSize;
-			return this;
-		}
-		
-		public Builder battery(int battery) {
-			this.battery = battery;
-			return this;
-		}
-		
-		public Phone build() {
-			Phone phone = new Phone();
-			
-			phone.setBattery(this.battery);
-			phone.setOS(this.OS);
-			phone.setScreenSize(this.screenSize);
-			phone.setRAM(this.RAM);
-			phone.setProcessor(this.processor);
-			
-			return phone;
-		}
-	}
-	
+	}	
 }
